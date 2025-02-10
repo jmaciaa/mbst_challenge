@@ -1,0 +1,25 @@
+.wrapper {
+  padding-top: var(--search-height);
+}
+
+.grid {
+  --min-tile-width: 344px;
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  grid-template-columns: var(--min-tile-width);
+  place-content: center;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--min-tile-width), 1fr)
+    );
+    place-content: start;
+    padding-top: 48px;
+  }
+}

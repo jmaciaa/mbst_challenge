@@ -1,0 +1,43 @@
+.product {
+  padding-inline: 16px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.image {
+  aspect-ratio: 1 / 1;
+  width: 312px;
+}
+
+.image img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .product {
+    padding-inline: 40px;
+  }
+
+  .product {
+    padding-top: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0 auto;
+  }
+
+  .product form {
+    width: 362px;
+    padding-left: 40px;
+  }
+
+  .image {
+    width: 337px;
+  }
+}

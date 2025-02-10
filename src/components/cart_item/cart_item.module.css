@@ -1,0 +1,47 @@
+.item {
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: space-between;
+}
+
+.image {
+  position: relative;
+  width: 160px;
+  aspect-ratio: 1 / 1;
+}
+
+.image img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-block: 40px;
+  flex-grow: 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-transform: uppercase;
+}
+
+.price {
+  margin-top: 20px;
+}
+
+.text button {
+  color: var(--danger);
+}
+
+@media (min-width: 768px) {
+  .image {
+    width: 262px;
+  }
+}

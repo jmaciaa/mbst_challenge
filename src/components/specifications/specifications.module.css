@@ -1,0 +1,47 @@
+.specifications {
+  padding-inline: 16px;
+}
+
+.specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.specifications h2 {
+  font-size: 1.25rem;
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  font-size: 0.75rem;
+  padding-block: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.spec:last-child {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.spec .title {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .specifications {
+    padding-inline: 40px;
+  }
+
+  .spec {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .specifications {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.cart {
+  padding-block: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cart h1 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .cart {
+    padding-block: 48px;
+  }
+}

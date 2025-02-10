@@ -1,0 +1,21 @@
+.color_label {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px var(--border-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  margin-right: 16px;
+}
+
+.color_label:hover {
+  outline: 1px solid var(--border-primary);
+  outline-offset: 0;
+}
+
+.color_label div {
+  height: 100%;
+  width: 100%;
+}

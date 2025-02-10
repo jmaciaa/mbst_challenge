@@ -1,0 +1,15 @@
+services:
+  mock-server:
+    image: node:20
+    build:
+      dockerfile: Dockerfile.mocks
+
+  playwright-tests:
+    build: .
+    environment:
+      - MOBILE_API_URL=http://mock-server:5000
+      - MOBILE_API_KEY=mock-api-key
+    depends_on:
+      - mock-server
+    volumes:
+      - ./e2e_tests:/app/e2e_tests

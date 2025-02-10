@@ -1,0 +1,81 @@
+.tile {
+  position: relative;
+  display: block;
+  padding: 16px;
+  box-shadow: 0 0 0 1px var(--border-subtle);
+  max-width: calc(100vw - 32px);
+  background: var(--background-primary);
+}
+
+.tile:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline-offset: 0;
+  outline: 1px solid var(--border-primary);
+}
+
+.image {
+  aspect-ratio: 1 / 1;
+  width: 312px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tile::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+  background: var(--background-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tile:hover:after {
+    transform: scaleY(1);
+  }
+
+  .tile:hover .info,
+  .tile:hover .brand {
+    color: var(--text-secondary);
+  }
+}
+
+.image img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.info .left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand {
+  font-size: 0.625rem;
+  line-height: 12.09px;
+  color: var(--text-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.price {
+  align-self: flex-end;
+  text-align: right;
+}

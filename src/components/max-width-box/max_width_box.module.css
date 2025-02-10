@@ -1,0 +1,15 @@
+.box {
+  padding-inline: 16px;
+}
+
+@media (min-width: 768px) {
+  .box {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .box {
+    padding-inline: 100px;
+  }
+}

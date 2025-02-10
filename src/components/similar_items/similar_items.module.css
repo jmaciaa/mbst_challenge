@@ -1,0 +1,32 @@
+.similar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.similar {
+  padding-left: 16px;
+}
+
+.similar h3 {
+  font-size: 1.25rem;
+}
+
+.tiles {
+  display: flex;
+  overflow-x: scroll;
+  padding: 1px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .similar {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .similar {
+    padding-left: calc((100vw - 1200px) / 2);
+  }
+}

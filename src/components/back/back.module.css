@@ -1,0 +1,17 @@
+.back {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  left: 0;
+  background: var(--background-primary);
+  z-index: 1;
+}
+
+.back a {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  width: fit-content;
+  margin-block: 12px;
+  padding-right: 8px;
+}
